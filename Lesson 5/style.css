@@ -1,0 +1,81 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.background-gif {
+  background: url("https://c.tenor.com/_eFIBFitATUAAAAd/tenor.gif") no-repeat center center fixed;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.calculator {
+  width: 350px;
+  backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.input-box {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  height: 60px;
+}
+
+.input-box::placeholder {
+  color: #ddd;
+}
+
+.btn {
+  font-size: 1.5rem;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%; /* makes the buttons circular */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: auto;
+  border: none;
+}
+
+.calc-btn {
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #000;
+}
+
+.op-btn {
+  background-color: #ffd966;
+  color: #333;
+}
+
+.eq-btn {
+  background-color: #92d050;
+  color: #000;
+}
+
+.clear-btn {
+  background-color: #ff9999;
+  color: #000;
+  border-radius: 15px; /* rectangular still for Clear button */
+  height: 55px;
+  font-size: 1.2rem;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+  transition: 0.2s;
+}
