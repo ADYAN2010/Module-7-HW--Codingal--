@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bank Tracker UI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>💰 Bank Tracker</h1>
+    <div class="balance-box">
+      <h2>Balance</h2>
+      <p id="balance">৳ 0.00</p>
+    </div>
+
+    <div class="input-section">
+      <input type="text" id="description" placeholder="Description" />
+      <input type="number" id="amount" placeholder="Amount" />
+      <div class="buttons">
+  <button onclick="addTransaction('income')">+ Income</button>
+  <button onclick="addTransaction('expense')">– Expense</button>
+  <button onclick="startInterest()">▶ Start Interest</button>
+  <button onclick="stopInterest()">⏹ Stop Interest</button>
+  <button onclick="transferToBank()">🏦 Transfer to Bank</button>
+</div>
+
+
+    </div>
+     <h3>Transactions</h3>
+    <ul id="transaction-list"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

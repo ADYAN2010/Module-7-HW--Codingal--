@@ -1,0 +1,174 @@
+/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  background: linear-gradient(to right, #141e30, #243b55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+/* Background blur image */
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://images.unsplash.com/photo-1588776814546-ec5d7caee18b?auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px);
+  z-index: -1;
+}
+
+/* Main glass container */
+.container.glass {
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 30px;
+  width: 90%;
+  max-width: 450px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.balance-box {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+#balance {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #2ecc71;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.input-section input {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.input-section input::placeholder {
+  color: #ccc;
+}
+
+/* Buttons layout */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+button {
+  flex: 1 1 48%;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 1em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  color: white;
+}
+
+/* Individual button colors */
+button:nth-child(1) {
+  background: #27ae60; /* Income - green */
+}
+
+button:nth-child(2) {
+  background: #e74c3c; /* Expense - red */
+}
+
+button:nth-child(3) {
+  background: #2c3e50; /* Start interest - dark */
+}
+
+button:nth-child(4) {
+  background: #34495e; /* Stop interest - dark */
+}
+
+button:nth-child(5) {
+  background: #9b59b6; /* Transfer to bank - purple */
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Transaction list */
+h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  color: #fff;
+}
+
+#transaction-list {
+  list-style: none;
+  max-height: 200px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+#transaction-list li {
+  padding: 10px;
+  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-left: 6px solid;
+  border-radius: 8px;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.income {
+  border-color: #2ecc71;
+  color: #2ecc71;
+}
+
+.expense {
+  border-color: #e74c3c;
+  color: #e74c3c;
+}
+
+/* Scrollbar styling */
+#transaction-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+#transaction-list::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
